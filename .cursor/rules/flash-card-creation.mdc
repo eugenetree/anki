@@ -1,0 +1,148 @@
+---
+alwaysApply: true
+description: Flash card creation guidelines for Ukrainian English learners
+---
+
+# Flash Card Creation Guidelines
+
+When creating flash cards for English learning, follow this specific format:
+
+## User Context
+
+- **Native Language**: Ukrainian
+- **Learning Language**: English
+- **Learning Approach**: Ukrainian sentence → English word/phrase with explanation
+
+## REQUIRED File Structure
+
+**CRITICAL**: Every flash card file MUST follow this exact markdown structure:
+
+```
+# Flash Card: [English Word/Phrase]
+
+## Front
+
+[Ukrainian sentence with <u>underlined word/phrase</u>]
+
+## Back
+
+<div style="text-align: left;">
+  <strong>Translation</strong>: "English translation"<br /><br />
+  <strong>Word</strong>: target word/phrase<br /><br />
+  <strong>Explanation</strong>: definition in English<br /><br />
+  <strong>Examples</strong>:<br />
+  First example sentence.<br />
+  Second example sentence.<br />
+  Third example sentence.
+</div>
+```
+
+**Reference**: See `vocab/turn-up.md` for the exact format example.
+
+## Flash Card Format
+
+### Front Side (Ukrainian)
+
+- Contains a Ukrainian sentence that is **entirely in Ukrainian** (never include English words)
+- **Underline the Ukrainian word/phrase** that corresponds to/translates to the target English vocabulary
+- The underlined Ukrainian word/phrase is what the learner will translate to English
+- The sentence should provide context for understanding the meaning
+- Use natural, everyday Ukrainian language
+- Make the sentence meaningful and relatable
+
+### Back Side (English)
+
+Must include four components:
+
+1. **English Translation**: Complete English translation of the Ukrainian sentence from the front side
+2. **English Word/Phrase**: The target vocabulary item
+3. **Explanation**: Definition or explanation in English (preferably in English, not Ukrainian)
+4. **Example Sentences**: 2-3 example sentences in English showing proper usage
+
+## Example Format
+
+This is how the file should look:
+
+```
+# Flash Card: Challenging
+
+## Front
+
+Я хочу вивчити нову мову, але це дуже <u>складно</u>. (not difficult)
+
+## Back
+
+<div style="text-align: left;">
+  <strong>Translation</strong>: "I want to learn a new language, but it's very challenging."<br /><br />
+  <strong>Word</strong>: challenging (not difficult)<br /><br />
+  <strong>Explanation</strong>: difficult in a way that tests your ability or determination<br /><br />
+  <strong>Examples</strong>:<br />
+  Learning a new language can be challenging at first.<br />
+  The math problem was quite challenging for the students.<br />
+  She found the job interview challenging but rewarding.
+</div>
+```
+
+## HTML Structure for Anki
+
+When creating flash cards, use this HTML structure for the back side to ensure proper formatting in Anki:
+
+<div style="text-align: left;">
+  <strong>Translation</strong>: "English translation of the Ukrainian
+  sentence."<br /><br />
+  <strong>Word</strong>: target word/phrase<br /><br />
+  <strong>Explanation</strong>: definition or explanation in English<br /><br />
+  <strong>Examples</strong>:<br />
+  First example sentence.<br />
+  Second example sentence.<br />
+  Third example sentence.
+</div>
+
+### HTML Structure Guidelines
+
+- **Use `<div style="text-align: left;">`** to wrap the entire back content for left alignment
+- **Use `<strong>` tags** for labels (Translation, Word, Explanation, Examples)
+- **Use `<br><br>`** for spacing between sections
+- **Use `<br>`** for line breaks between example sentences
+- **Do NOT use quotes** around example sentences
+- **Do NOT use `<ul><li>`** structure - use simple line breaks instead
+- **Keep it simple** - avoid complex HTML that might not render properly in Anki
+
+## Guidelines
+
+- Focus on practical, commonly used English vocabulary
+- Ensure Ukrainian sentences are grammatically correct and natural
+- Provide clear, concise English explanations
+- Include diverse example sentences showing different contexts
+- Prioritize words/phrases that are commonly used in daily conversation
+
+## File Creation
+
+- **DO NOT** put flash cards directly in the chat response
+- **ALWAYS** create a separate file in the `vocab/` directory for each flash card
+- Use descriptive filenames based on the English word/phrase being learned
+- Each file should contain the complete flash card format (Front and Back sides)
+- As en example of the text format the "turn-up.md" file can be used
+
+## Translation Accuracy
+
+- **Direct Translation**: If the Ukrainian text doesn't have a very explicit English translation, either:
+  - Find another Ukrainian example with a more suitable and direct translation, OR
+  - Add hints in brackets after the Ukrainian sentence on the front side to clarify the intended meaning (e.g., "(not difficult)") in case with "challenging"
+- **Multiple Meanings**: When an English word/phrase has multiple meanings, ALWAYS clarify with the user which context they want
+  - Example: "work out" could mean exercising OR calculating - ask which context is intended
+  - Wait for user clarification before creating the flash card
+  - **If user requests multiple meanings**: Create a single flash card with multiple Ukrainian sentences on the front (one for each meaning), each with its own underlined word/phrase that corresponds to the different contexts
+    - On the back, include all translations, explain all meanings in the Explanation section (numbered if needed), and provide 3-4 example sentences covering all the requested meanings
+    - Example: "turn up" meaning both "arrive/appear" and "be found/discovered" - use two Ukrainian sentences with different verbs (з'явився, знайшлися) that each point to one of the English meanings
+- **Context Clarity**: Ensure the Ukrainian sentence clearly points to the intended English meaning
+
+## Ukrainian Sentence Quality
+
+- **Avoid Similar Words**: Do NOT use Ukrainian words in the same sentence that have similar meanings to the target English word/phrase
+  - Example: Don't use "не здавайся" (don't give up) in a sentence about "hang in" since they convey similar meanings
+  - This creates confusion and doesn't provide clear context for the target vocabulary
+- **Use Hints Sparingly**: Only add hints in brackets when the Ukrainian sentence doesn't clearly indicate the intended English meaning
+  - If the Ukrainian sentence naturally points to the English word/phrase, hints are unnecessary
+  - Remove hints when the context is already clear from the sentence structure and vocabulary choice
+- **Natural Context**: Create Ukrainian sentences that naturally lead to the English word/phrase without forcing the connection
