@@ -22,11 +22,12 @@ When creating flash cards for English learning, follow this specific format:
 
 ## Front
 
-[Ukrainian sentence with <u>underlined word/phrase</u>]
+[1st Ukrainian sentence with <u>underlined word/phrase</u>]
+[2nd Ukrainian sentence with <u>underlined word/phrase</u>]
 
 ## Back
 
-<div style="text-align: left;">
+<div id="back">
   <strong>Translation</strong>: "English translation"<br /><br />
   <strong>Word</strong>: target word/phrase<br /><br />
   <strong>Explanation</strong>: definition in English<br /><br />
