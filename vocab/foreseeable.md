@@ -17,3 +17,4 @@
   The company failed to prepare for the foreseeable consequences of the merger.<br />
   Any foreseeable risks should be listed in the safety report.
 </div>
+  
